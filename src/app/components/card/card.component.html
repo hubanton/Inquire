@@ -10,8 +10,8 @@
     <p>{{ card.summary }}</p>
   </mat-card-content>
   <mat-card-footer>
-    <mat-chip-listbox>
+    <mat-chip-set>
       <mat-chip *ngFor="let tag of card.tags">{{ tag }}</mat-chip>
-    </mat-chip-listbox>
+    </mat-chip-set>
   </mat-card-footer>
 </mat-card>

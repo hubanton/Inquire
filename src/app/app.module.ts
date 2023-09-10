@@ -15,6 +15,8 @@ import { CardListComponent } from './components/card-list/card-list.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { QuestionDetailComponent } from './components/question-detail/question-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { QuestionDetailComponent } from './components/question-detail/question-d
     MatButtonModule,
     MatInputModule,
     MatToolbarModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

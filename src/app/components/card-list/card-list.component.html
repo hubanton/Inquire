@@ -1,7 +1,18 @@
-<div class="card-list-container">
-  <h1>Most Recent Questions</h1>
+<div class="card-container">
+  <div class="list-header">
+    <h1>Most Recent Questions</h1>
+    <div class="chip-set">
+      <mat-chip-option *ngFor="let tag of tags"
+                       (selectionChange)="selectionChanged($event, tag)"
+                       (removed)="removeKeyword(tag)">
+        <mat-icon matChipAvatar>add</mat-icon>
+        {{tag}}
+      </mat-chip-option>
+    </div>
+  </div>
+
   <div class="card-list">
-    <app-card *ngFor="let card of cards.slice(0, cardsToShow)" [card]="card"></app-card>
+    <app-card *ngFor="let card of filteredCards.getValue().slice(0, cardsToShow)" [card]="card"></app-card>
   </div>
 
   <button color="primary" mat-raised-button *ngIf="cardsToShow < cards.length" (click)="loadMoreCards()"
