@@ -1,0 +1,12 @@
+<div class="card-list-container">
+  <h1>Most Recent Questions</h1>
+  <div class="card-list">
+    <app-card *ngFor="let card of cards.slice(0, cardsToShow)" [card]="card"></app-card>
+  </div>
+
+  <button color="primary" mat-raised-button *ngIf="cardsToShow < cards.length" (click)="loadMoreCards()"
+          class="load-more-button">
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+</div>
+

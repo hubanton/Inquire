@@ -1,0 +1,17 @@
+<mat-card class="custom-card">
+  <!-- Add a div for the icon at the top right -->
+  <mat-card-header>
+    <button mat-icon-button [routerLink]="['/question', card.id]">
+      <mat-icon>open_in_new</mat-icon>
+    </button>
+    <mat-card-title>{{ card.title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ card.summary }}</p>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-chip-listbox>
+      <mat-chip *ngFor="let tag of card.tags">{{ tag }}</mat-chip>
+    </mat-chip-listbox>
+  </mat-card-footer>
+</mat-card>
